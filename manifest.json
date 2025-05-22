@@ -2,17 +2,26 @@
     "manifest_version": 3,
     "name": "D&D Beyond 2014 Link Fixer",
     "version": "1.0",
-    "description": "Redirects links for conditions, skills, and senses to the 2014 D&D Basic Rules.",
+    "description": "Redirects DDB links to 2014 rules.",
     "permissions": [],
     "content_scripts": [
-      {
-        "matches": ["*://www.dndbeyond.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
+        {
+            "matches": [
+                "*://www.dndbeyond.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
     ],
     "icons": {
-      "48": "icon.png"
+        "48": "icon.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ddb-2014-link-fixer@firelightrpg",
+            "strict_min_version": "109.0"
+        }
     }
-  }
-  
+}
